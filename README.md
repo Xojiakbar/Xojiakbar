@@ -1,30 +1,198 @@
-# Khojiakbar Botirov
+<div align="center">
 
-Data Scientist / ML Engineer focused on wearable sensor data, physiological time-series, multimodal sensing, and production-ready Python ML systems.
+# 🧠 Health AI: Early-Stage Alzheimer’s Detection
 
-I am a Doctoral Researcher at the University of Oulu working on sustainable IoT, optical sensing, embedded sensor networks, adaptive sampling, and time-series algorithms. My current portfolio focuses on transforming raw sensor streams into reliable health-related features using signal processing, statistical analysis, PyTorch, and reproducible data science workflows.
+### Deep Learning Prototype for Handwriting-Based Cognitive Screening
 
-## Focus areas
+![Python](https://img.shields.io/badge/Python-3.x-blue?logo=python)
+![TensorFlow](https://img.shields.io/badge/TensorFlow-Keras-orange?logo=tensorflow)
+![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-orange?logo=jupyter)
+![Scikit--Learn](https://img.shields.io/badge/Scikit--Learn-ML-blue?logo=scikitlearn)
+![Status](https://img.shields.io/badge/Status-Research%20Prototype-brightgreen)
 
-- Wearable and embedded sensor data
-- Physiological signal processing
-- Time-series forecasting and anomaly detection
-- Multimodal sensor fusion
-- Python, PyTorch, NumPy, pandas, scikit-learn
-- SQL, Git, Docker, FastAPI, CI/CD
-- Technical reporting and reproducible analysis
+</div>
 
-## Featured projects
+---
 
-### Wearable Health Feature Pipeline
-End-to-end pipeline for wearable physiological data: preprocessing, feature extraction, multimodal fusion, forecasting, model evaluation, and technical reporting.
+## 🚀 About the Project
 
-### IoT Time-Series Forecasting MLOps
-Production-style forecasting workflow with PyTorch, FastAPI, Docker, GitHub Actions, pytest, and model evaluation.
+**Health AI: Early-Stage Alzheimer’s Detection** is a research prototype that uses digital handwriting data to distinguish between:
 
-### Health AI: Early-Stage Alzheimer’s Detection
-Deep learning project for health-related classification using structured experimental data and reproducible notebooks.
+* **ES-AD** — Early-stage Alzheimer’s Disease subjects
+* **HC** — Healthy control subjects
 
-## Research background
+The project explores handwriting dynamics as potential digital biomarkers for early cognitive impairment screening.
 
-My research includes batteryless IoT, adaptive duty-cycle scheduling, TinyML, optical sensor systems, BLE/LIoT sensing, and real-world time-series analysis.
+> ⚠️ **Disclaimer:** This project is for research and educational purposes only. It is not a medical diagnostic tool.
+
+---
+
+## ✨ Key Features
+
+* 🖊️ Digital pen trajectory analysis
+* ⏱️ Pen-up and pen-down duration extraction
+* 📈 X/Y velocity-based feature engineering
+* 🧠 Fully connected neural network model
+* 📊 Handwriting behavior visualization
+* 🔬 ES-AD vs HC classification workflow
+
+---
+
+## 🧩 Project Workflow
+
+```text
+Raw handwriting data
+        ↓
+Pen trajectory preprocessing
+        ↓
+Feature extraction
+        ↓
+Data normalization
+        ↓
+Deep learning model
+        ↓
+ES-AD / HC classification
+```
+
+---
+
+## 📁 Repository Structure
+
+```text
+Health-AI-Early-Stage-Alzheimer-s-Detection/
+├── README.md
+└── internship.ipynb
+```
+
+---
+
+## 📊 Dataset
+
+The dataset includes handwriting and drawing tasks collected from two acquisition partitions:
+
+* **V3:** patient list and diagnostic labels
+* **V4:** patient list and diagnostic labels
+
+Example tasks include:
+
+* free-text writing,
+* copied text writing,
+* loop drawing,
+* handwriting/drawing sequences.
+
+> The raw medical dataset is not included in this repository. Update the dataset path inside the notebook before running the code.
+
+---
+
+## 🧠 Extracted Features
+
+The notebook uses digital pen recordings with features such as:
+
+| Feature Group | Examples                             |
+| ------------- | ------------------------------------ |
+| Trajectory    | `X`, `Y`, movement differences       |
+| Temporal      | time, pen-up time, pen-down time     |
+| Pressure      | pen pressure `P`                     |
+| Orientation   | azimuth `Az`, altitude `Al`          |
+| Kinematic     | x/y velocity, pen-in/pen-up velocity |
+
+---
+
+## 🛠️ Tech Stack
+
+* Python
+* Jupyter Notebook
+* NumPy
+* Pandas
+* Scikit-learn
+* TensorFlow / Keras
+* Matplotlib
+
+---
+
+## ⚙️ Installation
+
+```bash
+git clone https://github.com/Xojiakbar/Health-AI-Early-Stage-Alzheimer-s-Detection.git
+cd Health-AI-Early-Stage-Alzheimer-s-Detection
+```
+
+```bash
+python -m venv .venv
+source .venv/bin/activate
+```
+
+For Windows:
+
+```bash
+.venv\Scripts\activate
+```
+
+Install dependencies:
+
+```bash
+pip install numpy pandas scikit-learn tensorflow matplotlib jupyter
+```
+
+---
+
+## ▶️ Usage
+
+Start Jupyter Notebook:
+
+```bash
+jupyter notebook
+```
+
+Open:
+
+```text
+internship.ipynb
+```
+
+Update the dataset path:
+
+```python
+all_data = pd.read_csv(
+    "path/to/patient/Test1.txt",
+    skiprows=21,
+    sep=" ",
+    header=None
+)
+```
+
+Then run the notebook cells in order.
+
+---
+
+## 📌 Roadmap
+
+* [ ] Add `requirements.txt`
+* [ ] Remove hard-coded local paths
+* [ ] Add reusable preprocessing scripts
+* [ ] Add accuracy, precision, recall, F1-score, and ROC-AUC
+* [ ] Add model saving and loading
+* [ ] Add anonymized sample data or synthetic examples
+* [ ] Add clinical validation and ethical notes
+
+---
+
+## 👤 Author
+
+**Khojiakbar Botirov**
+GitHub: [@Xojiakbar](https://github.com/Xojiakbar)
+
+---
+
+## 📄 License
+
+No license file is currently included.
+
+---
+
+<div align="center">
+
+⭐ If this project is useful, consider starring the repository.
+
+</div>
+::: ​​
